@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="SolarViver.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <form action="/enviar" method="post">
+            <div class="home">
+                <p><label for="login">Login:</label></p>
+                <input type="text" id="login" name="login" placeholder="E-mail ou CPF" required>
+            </div>
+            
+            <div class="home">
+                <p><label for="senha">Senha:</label></p>
+                <input type="password" id="senha" name="senha"  minlength="8" placeholder="Mínimo 8 caracteres" required>
+            </div><br>
+
+            <select id="perfil" name="perfil" required>
+                <option value="acesso">Selecione o acesso</option>
+                <option value="admin">Administrador</option>
+                <option value="med">Médico(a)</option>
+                <option value="cuidadora">Cuidadora</option>
+            </select>
+
+            <p><button type="submit">Enviar</button></p>
+        </form><br>
+        
+        <p>Não possui cadastro?</p>
+        <a href="Registro.HTML">
+            <button type="button">Registrar</button>
+        </a>
+    </div>    
+</body>
+</html>

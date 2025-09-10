@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel da Cuidadora</title>
+    <link rel="shortcut icon" href="SolarViver.png" type="image/png">
+</head>
+<body>
+    <h2>Painel da Cuidadora</h2>
+    <p>Bem vinda(o), cuidadora(o)! Aqui você tem acesso as atividades diárias dos pacientes, ingestão de água e medicamentos.</p>
+
+    <form action="/enviar" method="post">
+        <div>
+            <button type="button">Cuidados</button>
+            <h2>Checklist Diário</h2> 
+            <h4>Pressão Arterial</h4>
+            <input type="text" id="arterial" name="arterial" placeholder="Digite o valor: mmHg">
+
+            <h4>Temperatura</h4>
+            <input type="text" id="temp" name="temp" placeholder="Digite a temperatura: ºC" required>
+
+            <h4>Frequência Cardíaca</h4>
+            <input type="text" id="cardiaca" name="cardiaca" placeholder="Digite a frequência: bpm" required>
+
+            <h4>Saturação</h4>
+            <input type="text" id="sat" name="sat"
+            placeholder="Digite o valor: %" required>
+
+            <h4>Banho</h4>
+            <input type="time" id="banho" name="banho" required>
+
+            <h4>Banho de Sol</h4>
+            <input type="time" id="banhosol" name="banhosol" required>
+
+            <h4>Higiene Oral</h4>
+            <input type="checkbox" id="higiene" name="higiene" required>
+            <label for="higiene">Concluído</label>
+
+            <h4>Corte de Unha</h4>
+            <input type="checkbox" id="unha" name="unha" required>
+            <label for="unha">Concluído</label>
+
+            <p><button type="submit">Enviar</button></p>
+        </div><br>
+    
+        <div>
+            <button type="button">Hidratação</button>
+
+            <h2>Controle de Ingestão de Água</h2>
+            <h4>Progresso Diário:</h4>
+            <p class="qntagua">0ml/2000ml</p>
+            <h4>Adicionar Água:</h4>
+            <button type="button">+ 1 copo (200ml)</button>
+            <button type="button">+ 1/2 copo (100ml)</button><br><br>
+            <button type="submit">Enviar</button>
+        </div><br><br>
+
+        <div>
+            <button type="button">Medicamentos</button><br>
+                <!--APENAS EXEMPLO DE COMO FICARIA)-->
+            <h3>Paciente: Lucas</h3>
+            <input type="checkbox" id="med1" name="med1" required>
+            <label for="med1">Dipirona 500mg - 10hrs</label>
+
+            <input type="checkbox" id="med2" name="med2" required>
+            <label for="med2">Paracetamol 500mg - 14hrs</label>
+
+            <input type="checkbox" id="med3" name="med3" required>
+            <label for="med3">Amoxilina 500mg - 20hrs</label>
+
+            <p><button type="submit">Confirmar</button></p>
+        </div>    
+
+        <p><legend>Observações:</legend></p>
+        <input type="text" id="obser" name="obser" placeholder="Digite aqui alguma observação" pattern="Digite aqui alguma observação">
+
+        <a href="TelaLoginProntuário.HTML">
+            <button type="button">Sair</button>
+        </a>
+    </form>    
+</body>
+</html>
